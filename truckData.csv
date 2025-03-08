@@ -1,0 +1,4 @@
+Vehicle,Capacity (100×120),Capacity (80×120),Num. of vehicles,Fixed cost (ck),Variable cost (c′k)
+Truck,22,33,2,100,150
+Lorry,12,18,1,80,120
+Van,6,8,1,50,75
