@@ -1,0 +1,251 @@
+Read LP format model from file C:\Users\alt_user\AppData\Local\Temp\tmp8c0jizeu.pyomo.lp
+Reading time = 0.05 seconds
+x1: 1344 rows, 27090 columns, 96485 nonzeros
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (26100.2))
+
+CPU model: 12th Gen Intel(R) Core(TM) i7-12700H, instruction set [SSE2|AVX|AVX2]
+Thread count: 14 physical cores, 20 logical processors, using up to 20 threads
+
+Optimize a model with 1344 rows, 27090 columns and 96485 nonzeros
+Model fingerprint: 0x7d28087f
+Variable types: 0 continuous, 27090 integer (13608 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+02]
+  Objective range  [1e+01, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 116490.00000
+Presolve removed 218 rows and 9465 columns
+Presolve time: 0.10s
+Presolved: 1126 rows, 17625 columns, 57345 nonzeros
+Found heuristic solution: objective 101140.00000
+Variable types: 0 continuous, 17625 integer (13590 binary)
+Found heuristic solution: objective 94280.000000
+
+Root relaxation: objective 3.212121e+02, 4936 iterations, 0.08 seconds (0.13 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  321.21212    0   70 94280.0000  321.21212   100%     -    0s
+H    0     0                    91210.000000  321.21212   100%     -    0s
+H    0     0                    83005.000000  321.21212   100%     -    0s
+H    0     0                    71030.000000  321.21212   100%     -    0s
+H    0     0                    19255.000000  321.21212  98.3%     -    0s
+H    0     0                    18303.000000  321.21212  98.2%     -    0s
+H    0     0                    16495.000000  321.21212  98.1%     -    0s
+H    0     0                    16465.000000  321.21212  98.0%     -    0s
+H    0     0                    14745.000000  321.21212  97.8%     -    0s
+H    0     0                    14715.000000  321.21212  97.8%     -    0s
+H    0     0                    13982.000000  322.21463  97.7%     -    0s
+H    0     0                    13932.000000  322.21463  97.7%     -    0s
+H    0     0                    13378.000000  322.21463  97.6%     -    0s
+H    0     0                    4324.0000000  322.21463  92.5%     -    0s
+H    0     0                    4312.0000000  322.21463  92.5%     -    0s
+     0     0  322.21463    0  232 4312.00000  322.21463  92.5%     -    0s
+H    0     0                    4050.0000000  322.21463  92.0%     -    0s
+H    0     0                    2915.0000000  322.21463  88.9%     -    0s
+H    0     0                    2820.0000000  322.21463  88.6%     -    0s
+H    0     0                    2030.0000000  322.21463  84.1%     -    0s
+H    0     0                    1580.0000000  322.21463  79.6%     -    0s
+H    0     0                    1480.0000000  322.21463  78.2%     -    0s
+H    0     0                    1230.0000000  322.21463  73.8%     -    0s
+H    0     0                    1110.0000000  322.21463  71.0%     -    0s
+H    0     0                     910.0000000  322.21463  64.6%     -    0s
+H    0     0                     810.0000000  322.21463  60.2%     -    0s
+H    0     0                     780.0000000  322.21463  58.7%     -    0s
+H    0     0                     730.0000000  322.21463  55.9%     -    0s
+H    0     0                     680.0000000  322.21463  52.6%     -    0s
+H    0     0                     600.0000000  322.21463  46.3%     -    0s
+     0     0  348.40054    0  202  600.00000  348.40054  41.9%     -    1s
+     0     0  348.93142    0  392  600.00000  348.93142  41.8%     -    1s
+     0     0  361.61370    0  349  600.00000  361.61370  39.7%     -    1s
+     0     0  367.83994    0  364  600.00000  367.83994  38.7%     -    1s
+     0     0  367.83994    0  378  600.00000  367.83994  38.7%     -    1s
+     0     0  367.83994    0  399  600.00000  367.83994  38.7%     -    1s
+     0     0  370.31965    0  393  600.00000  370.31965  38.3%     -    1s
+     0     0  370.31965    0  397  600.00000  370.31965  38.3%     -    1s
+     0     0  370.31965    0  458  600.00000  370.31965  38.3%     -    1s
+     0     0  370.52722    0  466  600.00000  370.52722  38.2%     -    1s
+     0     0  370.52722    0  467  600.00000  370.52722  38.2%     -    1s
+H    0     0                     580.0000000  371.98252  35.9%     -    2s
+     0     0  371.98252    0  426  580.00000  371.98252  35.9%     -    2s
+     0     0  371.98252    0  375  580.00000  371.98252  35.9%     -    2s
+     0     2  371.98252    0  339  580.00000  371.98252  35.9%     -    2s
+H   51    58                     560.0000000  385.93129  31.1%   213    3s
+   947   870  516.01694   42   63  560.00000  408.91403  27.0%  75.3    5s
+H 1622   926                     540.0000000  408.91403  24.3%  67.0    6s
+H 2715   873                     520.0000000  451.61051  13.2%  68.3    8s
+  3572  1136     cutoff   34       520.00000  461.63895  11.2%  70.9   10s
+H 4254   741                     500.0000000  463.97536  7.20%  74.9   11s
+  5140   735  474.30631   12   84  500.00000  474.30631  5.14%  75.1   15s
+  6279   679  474.30631   20   74  500.00000  474.30631  5.14%  78.8   20s
+  9192   693  497.76571   61   73  500.00000  478.22360  4.36%  67.5   25s
+ 11273   509  487.27062   31   86  500.00000  483.78760  3.24%  59.8   30s
+ 14746   329 infeasible   41       500.00000  494.51887  1.10%  50.3   35s
+
+Explored 15807 nodes (770644 simplex iterations) in 36.85 seconds (30.32 work units)
+Thread count was 20 (of 20 available processors)
+
+Solution count 10: 500 520 540 ... 810
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.000000000000e+02, best bound 5.000000000000e+02, gap 0.0000%
+# ==========================================================
+# = Solver Results                                         =
+# ==========================================================
+# ----------------------------------------------------------
+#   Problem Information
+# ----------------------------------------------------------
+Problem: 
+- Name: x1
+  Lower bound: 500.0
+  Upper bound: 500.0
+  Number of objectives: 1
+  Number of constraints: 1344
+  Number of variables: 27090
+  Number of binary variables: 13608
+  Number of integer variables: 27090
+  Number of continuous variables: 0
+  Number of nonzeros: 96485
+  Sense: minimize
+# ----------------------------------------------------------
+#   Solver Information
+# ----------------------------------------------------------
+Solver: 
+- Status: ok
+  Return code: 0
+  Message: Model was solved to optimality (subject to tolerances), and an optimal solution is available.
+  Termination condition: optimal
+  Termination message: Model was solved to optimality (subject to tolerances), and an optimal solution is available.
+  Wall time: 36.8529999256134
+  Error rc: 0
+# ----------------------------------------------------------
+#   Solution Information
+# ----------------------------------------------------------
+Solution: 
+- number of solutions: 0
+  number of solutions displayed: 0
+Pallet 1 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 2 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 3 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 4 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 5 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 6 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 7 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 8 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 9 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 10 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 11 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 12 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 13 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 14 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 15 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 16 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 17 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 18 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 19 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 20 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 21 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 22 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 23 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 24 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 25 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 26 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 27 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 28 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 29 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 30 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 30 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 31 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 32 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 33 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 34 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 35 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 36 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 37 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 37 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 38 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 39 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 40 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 41 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 42 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 43 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 44 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 45 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 45 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 46 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 46 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 47 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 48 shipped by vehicle 2 on day 3, trip 1, size 2
+Pallet 49 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 50 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 51 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 51 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 52 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 53 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 54 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 55 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 56 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 57 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 58 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 59 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 60 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 61 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 62 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 63 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 64 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 64 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 65 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 66 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 67 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 68 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 69 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 70 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 71 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 72 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 73 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 73 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 74 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 75 shipped by vehicle 2 on day 5, trip 1, size 2
+Pallet 76 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 77 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 78 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 79 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 79 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 80 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 81 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 82 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 83 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 83 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 84 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 85 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 85 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 86 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 87 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 88 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 89 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 90 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 90 shipped by vehicle 2 on day 2, trip 1, size 2
+Pallet 91 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 92 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 93 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 94 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 94 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 95 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 96 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 97 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 98 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 98 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 99 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 99 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 100 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 101 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 102 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 102 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 103 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 104 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 105 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 105 shipped by vehicle 2 on day 1, trip 2, size 2
+Pallet 105 shipped by vehicle 2 on day 4, trip 2, size 2
+Pallet 106 shipped by vehicle 1 on day 6, trip 2, size 2
