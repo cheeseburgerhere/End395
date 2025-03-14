@@ -1,0 +1,782 @@
+Read LP format model from file C:\Users\alt_user\AppData\Local\Temp\tmpz4xmkj4r.pyomo.lp
+Reading time = 0.38 seconds
+x1: 138622 rows, 189483 columns, 454335 nonzeros
+Set parameter TimeLimit to value 300
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (26100.2))
+
+CPU model: 12th Gen Intel(R) Core(TM) i7-12700H, instruction set [SSE2|AVX|AVX2]
+Thread count: 14 physical cores, 20 logical processors, using up to 20 threads
+
+Non-default parameters:
+TimeLimit  300
+
+Optimize a model with 138622 rows, 189483 columns and 454335 nonzeros
+Model fingerprint: 0xe650223b
+Variable types: 1 continuous, 189482 integer (110860 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [1e+01, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 4e+02]
+Presolve removed 126666 rows and 132875 columns
+Presolve time: 0.08s
+Presolved: 11956 rows, 56608 columns, 237128 nonzeros
+Variable types: 0 continuous, 56608 integer (41540 binary)
+Performing another presolve...
+Presolve removed 519 rows and 1025 columns
+Presolve time: 0.43s
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing primal log only...
+
+Concurrent spin time: 0.01s
+
+Solved with primal simplex
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root relaxation: objective 1.386212e+03, 10662 iterations, 0.21 seconds (0.24 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1386.21212    0  120          - 1386.21212      -     -    1s
+     0     0 1386.21212    0  121          - 1386.21212      -     -    1s
+     0     0 1386.21212    0  123          - 1386.21212      -     -    1s
+     0     0 1386.21212    0  123          - 1386.21212      -     -    1s
+     0     0 1386.21212    0  119          - 1386.21212      -     -    1s
+     0     0 1386.21212    0  119          - 1386.21212      -     -    1s
+     0     0 1386.28655    0  119          - 1386.28655      -     -    1s
+     0     0 1386.28655    0  120          - 1386.28655      -     -    1s
+     0     0 1386.28655    0  120          - 1386.28655      -     -    1s
+     0     0 1386.29068    0  120          - 1386.29068      -     -    1s
+     0     0 1386.29068    0  120          - 1386.29068      -     -    1s
+H    0     0                    3381.0000000 1386.29068  59.0%     -    1s
+H    0     0                    3362.0000000 1386.29068  58.8%     -    1s
+     0     0 1401.93948    0  676 3362.00000 1401.93948  58.3%     -    3s
+     0     0 1401.93948    0  667 3362.00000 1401.93948  58.3%     -    3s
+     0     0 1401.93948    0  544 3362.00000 1401.93948  58.3%     -    3s
+     0     0 1401.93948    0  548 3362.00000 1401.93948  58.3%     -    3s
+     0     0 1401.93948    0  540 3362.00000 1401.93948  58.3%     -    3s
+     0     0 1401.93948    0  540 3362.00000 1401.93948  58.3%     -    3s
+     0     0 1401.93948    0  540 3362.00000 1401.93948  58.3%     -    3s
+     0     0 1401.93948    0  540 3362.00000 1401.93948  58.3%     -    3s
+H    0     0                    3244.0000000 1401.93948  56.8%     -    3s
+H    0     0                    3220.0000000 1401.93948  56.5%     -    3s
+H    0     0                    3120.0000000 1401.93948  55.1%     -    3s
+H    0     0                    3108.0000000 1401.93948  54.9%     -    3s
+H    0     0                    3086.0000000 1401.93948  54.6%     -    3s
+H    0     0                    3065.0000000 1401.93948  54.3%     -    3s
+H    0     0                    3041.0000000 1401.93948  53.9%     -    3s
+     0     0 1406.43707    0  451 3041.00000 1406.43707  53.8%     -    3s
+     0     0 1406.43707    0  470 3041.00000 1406.43707  53.8%     -    4s
+     0     0 1406.43707    0  470 3041.00000 1406.43707  53.8%     -    4s
+     0     0 1406.43707    0  468 3041.00000 1406.43707  53.8%     -    4s
+     0     0 1406.43707    0  466 3041.00000 1406.43707  53.8%     -    4s
+     0     0 1406.43707    0  478 3041.00000 1406.43707  53.8%     -    4s
+     0     0 1406.43707    0  476 3041.00000 1406.43707  53.8%     -    4s
+     0     0 1406.43707    0  467 3041.00000 1406.43707  53.8%     -    4s
+     0     0 1408.87426    0  603 3041.00000 1408.87426  53.7%     -    5s
+H    0     0                    2861.0000000 1408.87426  50.8%     -    5s
+H    0     0                    2849.0000000 1408.87426  50.5%     -    5s
+     0     0 1415.73598    0  617 2849.00000 1415.73598  50.3%     -    5s
+     0     0 1415.73598    0  571 2849.00000 1415.73598  50.3%     -    5s
+     0     0 1424.55189    0  684 2849.00000 1424.55189  50.0%     -    6s
+     0     0 1424.55189    0  685 2849.00000 1424.55189  50.0%     -    6s
+     0     0 1424.84492    0  689 2849.00000 1424.84492  50.0%     -    6s
+     0     0 1424.88724    0  660 2849.00000 1424.88724  50.0%     -    6s
+     0     0 1425.03539    0  671 2849.00000 1425.03539  50.0%     -    6s
+     0     0 1425.03539    0  671 2849.00000 1425.03539  50.0%     -    6s
+     0     0 1425.09558    0  660 2849.00000 1425.09558  50.0%     -    6s
+     0     0 1425.09558    0  660 2849.00000 1425.09558  50.0%     -    6s
+     0     0 1425.09558    0  660 2849.00000 1425.09558  50.0%     -    6s
+     0     0 1425.82199    0  645 2849.00000 1425.82199  50.0%     -    7s
+H    0     0                    2844.0000000 1425.82199  49.9%     -    7s
+     0     0 1428.98413    0  608 2844.00000 1428.98413  49.8%     -    7s
+     0     0 1431.00576    0  655 2844.00000 1431.00576  49.7%     -    8s
+     0     0 1431.03733    0  652 2844.00000 1431.03733  49.7%     -    8s
+     0     0 1431.21940    0  644 2844.00000 1431.21940  49.7%     -    8s
+     0     0 1431.22402    0  597 2844.00000 1431.22402  49.7%     -    8s
+     0     0 1433.79643    0  789 2844.00000 1433.79643  49.6%     -    9s
+H    0     0                    2842.0000000 1433.79643  49.5%     -    9s
+H    0     0                    2796.0000000 1433.79643  48.7%     -    9s
+H    0     0                    2747.0000000 1433.79643  47.8%     -    9s
+H    0     0                    2724.0000000 1433.79643  47.4%     -    9s
+H    0     0                    2719.0000000 1433.79643  47.3%     -    9s
+H    0     0                    2718.0000000 1433.79643  47.2%     -    9s
+H    0     0                    2708.0000000 1433.79643  47.1%     -    9s
+H    0     0                    2687.0000000 1436.98493  46.5%     -    9s
+H    0     0                    2593.0000000 1436.98493  44.6%     -    9s
+H    0     0                    2582.0000000 1436.98493  44.3%     -   10s
+H    0     0                    2577.0000000 1436.98493  44.2%     -   10s
+H    0     0                    2562.0000000 1436.98493  43.9%     -   10s
+H    0     0                    2559.0000000 1436.98493  43.8%     -   10s
+H    0     0                    2557.0000000 1436.98493  43.8%     -   10s
+     0     0 1451.22269    0  713 2557.00000 1451.22269  43.2%     -   10s
+H    0     0                    2538.0000000 1455.28029  42.7%     -   10s
+H    0     0                    2526.0000000 1455.28029  42.4%     -   10s
+H    0     0                    2524.0000000 1455.28029  42.3%     -   10s
+     0     0 1455.28029    0  675 2524.00000 1455.28029  42.3%     -   10s
+     0     0 1455.57416    0  680 2524.00000 1455.57416  42.3%     -   10s
+     0     0 1456.79659    0  696 2524.00000 1456.79659  42.3%     -   10s
+     0     0 1457.16871    0  708 2524.00000 1457.16871  42.3%     -   10s
+     0     0 1457.36455    0  727 2524.00000 1457.36455  42.3%     -   10s
+     0     0 1457.40670    0  735 2524.00000 1457.40670  42.3%     -   10s
+     0     0 1457.40670    0  739 2524.00000 1457.40670  42.3%     -   10s
+H    0     0                    2413.0000000 1457.40670  39.6%     -   11s
+H    0     0                    2370.0000000 1457.40670  38.5%     -   11s
+H    0     0                    2367.0000000 1457.40670  38.4%     -   11s
+H    0     0                    2365.0000000 1457.40670  38.4%     -   11s
+H    0     0                    2357.0000000 1457.40670  38.2%     -   11s
+H    0     0                    2350.0000000 1466.93468  37.6%     -   11s
+H    0     0                    2326.0000000 1466.93468  36.9%     -   11s
+     0     0 1466.93468    0  818 2326.00000 1466.93468  36.9%     -   11s
+H    0     0                    2321.0000000 1466.93468  36.8%     -   11s
+H    0     0                    2318.0000000 1466.93468  36.7%     -   12s
+H    0     0                    2297.0000000 1466.93468  36.1%     -   12s
+H    0     0                    2296.0000000 1472.90636  35.8%     -   12s
+     0     0 1472.90636    0  828 2296.00000 1472.90636  35.8%     -   12s
+     0     0 1472.95204    0  843 2296.00000 1472.95204  35.8%     -   12s
+H    0     0                    2283.0000000 1472.95204  35.5%     -   12s
+     0     0 1472.95204    0  782 2283.00000 1472.95204  35.5%     -   12s
+H    0     0                    2271.0000000 1472.95204  35.1%     -   13s
+     0     0 1478.99903    0  754 2271.00000 1478.99903  34.9%     -   13s
+     0     0 1485.99626    0  646 2271.00000 1485.99626  34.6%     -   14s
+     0     0 1486.00508    0  576 2271.00000 1486.00508  34.6%     -   14s
+H    0     0                    2262.0000000 1486.00508  34.3%     -   14s
+H    0     0                    2243.0000000 1486.00508  33.7%     -   14s
+     0     0 1493.60235    0  509 2243.00000 1493.60235  33.4%     -   15s
+H    0     0                    2238.0000000 1493.60235  33.3%     -   15s
+H    0     0                    2235.0000000 1493.60235  33.2%     -   15s
+     0     0 1493.84579    0  649 2235.00000 1493.84579  33.2%     -   16s
+     0     0 1498.24579    0  634 2235.00000 1498.24579  33.0%     -   16s
+H    0     0                    2234.0000000 1498.24579  32.9%     -   16s
+H    0     0                    2224.0000000 1498.24579  32.6%     -   16s
+     0     0 1498.24579    0  563 2224.00000 1498.24579  32.6%     -   16s
+     0     0 1499.41493    0  578 2224.00000 1499.41493  32.6%     -   17s
+H    0     0                    2221.0000000 1499.41493  32.5%     -   17s
+H    0     0                    2218.0000000 1499.41493  32.4%     -   17s
+H    0     0                    2217.0000000 1499.42020  32.4%     -   18s
+     0     0 1501.92424    0  565 2217.00000 1501.92424  32.3%     -   18s
+     0     0 1501.93445    0  621 2217.00000 1501.93445  32.3%     -   18s
+     0     0 1502.60385    0  593 2217.00000 1502.60385  32.2%     -   19s
+     0     0 1502.60385    0  101 2217.00000 1502.60385  32.2%     -   19s
+     0     0 1502.60385    0  101 2217.00000 1502.60385  32.2%     -   19s
+     0     0 1546.51136    0  457 2217.00000 1546.51136  30.2%     -   21s
+     0     0 1576.76038    0  452 2217.00000 1576.76038  28.9%     -   21s
+     0     0 1582.23394    0  477 2217.00000 1582.23394  28.6%     -   21s
+     0     0 1585.79889    0  463 2217.00000 1585.79889  28.5%     -   21s
+     0     0 1593.06245    0  529 2217.00000 1593.06245  28.1%     -   22s
+     0     0 1594.60630    0  500 2217.00000 1594.60630  28.1%     -   22s
+     0     0 1596.42448    0  402 2217.00000 1596.42448  28.0%     -   22s
+     0     0 1597.14717    0  388 2217.00000 1597.14717  28.0%     -   22s
+H    0     0                    2216.0000000 1603.86833  27.6%     -   22s
+H    0     0                    2202.0000000 1603.86833  27.2%     -   22s
+H    0     0                    2194.0000000 1603.86833  26.9%     -   22s
+     0     0 1603.86833    0  608 2194.00000 1603.86833  26.9%     -   22s
+H    0     0                    2186.0000000 1618.23543  26.0%     -   23s
+     0     0 1618.23543    0  701 2186.00000 1618.23543  26.0%     -   23s
+     0     0 1618.58571    0  648 2186.00000 1618.58571  26.0%     -   23s
+     0     0 1618.58571    0  641 2186.00000 1618.58571  26.0%     -   23s
+     0     0 1618.72472    0  713 2186.00000 1618.72472  26.0%     -   23s
+     0     0 1624.31633    0  730 2186.00000 1624.31633  25.7%     -   24s
+     0     0 1632.85511    0  756 2186.00000 1632.85511  25.3%     -   24s
+     0     0 1632.90955    0  765 2186.00000 1632.90955  25.3%     -   24s
+H    0     0                    2181.0000000 1632.90955  25.1%     -   24s
+H    0     0                    2173.0000000 1632.90955  24.9%     -   24s
+     0     0 1633.21133    0  791 2173.00000 1633.21133  24.8%     -   25s
+     0     0 1638.69755    0  772 2173.00000 1638.69755  24.6%     -   25s
+     0     0 1638.69755    0  803 2173.00000 1638.69755  24.6%     -   25s
+     0     0 1642.17723    0  858 2173.00000 1642.17723  24.4%     -   26s
+     0     0 1659.71647    0  843 2173.00000 1659.71647  23.6%     -   26s
+     0     0 1660.09526    0  842 2173.00000 1660.09526  23.6%     -   26s
+     0     0 1660.52139    0  843 2173.00000 1660.52139  23.6%     -   26s
+     0     0 1660.62556    0  842 2173.00000 1660.62556  23.6%     -   26s
+     0     0 1661.04223    0  842 2173.00000 1661.04223  23.6%     -   26s
+     0     0 1662.00813    0  825 2173.00000 1662.00813  23.5%     -   26s
+     0     0 1670.20813    0  736 2173.00000 1670.20813  23.1%     -   26s
+     0     0 1670.20813    0  750 2173.00000 1670.20813  23.1%     -   26s
+     0     0 1673.22100    0  768 2173.00000 1673.22100  23.0%     -   27s
+     0     0 1673.22100    0  735 2173.00000 1673.22100  23.0%     -   27s
+     0     0 1684.14917    0  762 2173.00000 1684.14917  22.5%     -   28s
+     0     0 1684.42780    0  773 2173.00000 1684.42780  22.5%     -   28s
+     0     0 1684.42780    0  772 2173.00000 1684.42780  22.5%     -   28s
+     0     0 1685.62656    0  790 2173.00000 1685.62656  22.4%     -   29s
+H    0     0                    2166.0000000 1685.62656  22.2%     -   29s
+     0     0 1685.62656    0  798 2166.00000 1685.62656  22.2%     -   29s
+     0     0 1687.75051    0  721 2166.00000 1687.75051  22.1%     -   30s
+     0     0 1687.91531    0  815 2166.00000 1687.91531  22.1%     -   31s
+     0     0 1687.91666    0  859 2166.00000 1687.91666  22.1%     -   31s
+     0     0 1700.51238    0  768 2166.00000 1700.51238  21.5%     -   31s
+     0     0 1700.51238    0  108 2166.00000 1700.51238  21.5%     -   32s
+     0     0 1700.51238    0  392 2166.00000 1700.51238  21.5%     -   33s
+H    0     0                    2155.0000000 1700.51238  21.1%     -   34s
+     0     0 1700.51238    0  539 2155.00000 1700.51238  21.1%     -   34s
+     0     0 1704.43774    0  504 2155.00000 1704.43774  20.9%     -   34s
+     0     0 1715.29049    0  627 2155.00000 1715.29049  20.4%     -   34s
+     0     0 1719.10740    0  564 2155.00000 1719.10740  20.2%     -   35s
+     0     0 1719.48821    0  529 2155.00000 1719.48821  20.2%     -   35s
+     0     0 1719.50887    0  549 2155.00000 1719.50887  20.2%     -   35s
+     0     0 1719.96284    0  572 2155.00000 1719.96284  20.2%     -   35s
+     0     0 1719.96284    0  576 2155.00000 1719.96284  20.2%     -   35s
+     0     0 1724.78914    0  704 2155.00000 1724.78914  20.0%     -   35s
+     0     0 1725.23287    0  660 2155.00000 1725.23287  19.9%     -   35s
+     0     0 1725.23287    0  695 2155.00000 1725.23287  19.9%     -   35s
+     0     0 1733.48932    0  727 2155.00000 1733.48932  19.6%     -   35s
+     0     0 1734.19495    0  683 2155.00000 1734.19495  19.5%     -   36s
+     0     0 1734.19495    0  723 2155.00000 1734.19495  19.5%     -   36s
+H    0     0                    2135.0000000 1734.19495  18.8%     -   36s
+     0     0 1744.91053    0  755 2135.00000 1744.91053  18.3%     -   36s
+     0     0 1744.91053    0  818 2135.00000 1744.91053  18.3%     -   36s
+     0     0 1745.32045    0  779 2135.00000 1745.32045  18.3%     -   37s
+     0     0 1745.32045    0  410 2135.00000 1745.32045  18.3%     -   37s
+     0     2 1745.32045    0  393 2135.00000 1745.32045  18.3%     -   38s
+    44    56 1753.01114    6  593 2135.00000 1747.60728  18.1%   438   40s
+H   83    73                    2126.0000000 1747.61563  17.8%   314   40s
+   237   219 1769.55765   21  425 2126.00000 1748.93226  17.7%   145   45s
+   533   525 1780.46005   61  359 2126.00000 1748.93226  17.7%  74.5   50s
+   782   722 infeasible   67      2126.00000 1748.93226  17.7%  79.4   55s
+   854   790 1866.89616   72  330 2126.00000 1748.93226  17.7%  78.4   60s
+   963   900 1854.39816   75  311 2126.00000 1748.93226  17.7%  94.9   65s
+  1117  1062 1857.30037   89  315 2126.00000 1748.93226  17.7%  99.4   70s
+  1311  1255 1859.64905  103  289 2126.00000 1748.93226  17.7%  98.6   75s
+  1572  1511 1867.47127  123  281 2126.00000 1748.93226  17.7%  91.4   80s
+  2051  2164 1890.17485  150  233 2126.00000 1748.93226  17.7%  78.1   85s
+  3417  2965 1796.80804   26 3377 2126.00000 1749.19696  17.7%  75.5   90s
+  3436  2978 2046.59181  118  600 2126.00000 1827.17407  14.1%  75.0   95s
+  3468  2999 2024.27137  245  796 2126.00000 1863.60168  12.3%  74.3  100s
+  3485  3010 1889.60919  207  802 2126.00000 1883.47010  11.4%  74.0  105s
+  3500  3020 1887.87496   15  376 2126.00000 1887.87496  11.2%  73.7  110s
+  3526  3038 1890.50946  154  598 2126.00000 1890.50946  11.1%  73.1  115s
+  3557  3058 1897.22770   81  705 2126.00000 1897.22770  10.8%  72.5  120s
+  3581  3075 1973.59139  209  601 2126.00000 1912.94236  10.0%  91.6  125s
+  3597  3086 1915.29226  123  666 2126.00000 1915.29226  9.91%  91.2  130s
+  3615  3098 1930.34031  122  813 2126.00000 1923.92411  9.50%  90.8  137s
+  3626  3105 1924.84450  154  796 2126.00000 1924.84450  9.46%  90.5  140s
+  3656  3126 1948.78709   29  861 2126.00000 1948.78709  8.34%  97.3  145s
+  3672  3137 2003.08919  198  975 2126.00000 1950.33548  8.26%  96.9  150s
+  3682  3144 2049.13309  133  921 2126.00000 1955.30169  8.03%  96.6  155s
+  3701  3156 1963.54532  155 1013 2126.00000 1963.54532  7.64%  96.1  160s
+  3712  3164 2010.99200  171  925 2126.00000 1976.51773  7.03%  95.9  165s
+  3715  3166 1981.04177  122  915 2126.00000 1981.04177  6.82%  95.8  170s
+  3740  3184 1994.95277  262  606 2126.00000 1981.22652  6.81%   105  175s
+  3758  3196 2096.25723   84  727 2126.00000 1993.53525  6.23%   105  180s
+  3775  3207 1998.29599  179  689 2126.00000 1998.29599  6.01%   104  185s
+  3781  3211 1998.65891  209  446 2126.00000 1998.65891  5.99%   104  191s
+  3802  3219 2093.35722   50  394 2126.00000 2005.38496  5.67%   114  195s
+  4017  3200 2100.14489   69  412 2126.00000 2014.05008  5.27%   115  200s
+  4393  3205 infeasible   64      2126.00000 2054.83122  3.35%   110  206s
+  4681  3160 2124.42392   80  129 2126.00000 2075.38211  2.38%   109  210s
+  5096  3089 2118.17887  115   51 2126.00000 2075.38211  2.38%   102  215s
+  5130  3094     cutoff  116      2126.00000 2082.71742  2.04%   101  221s
+  5303  3097 2121.60606   97   93 2126.00000 2082.73174  2.04%   100  225s
+  5770  2996 2124.00000  131   28 2126.00000 2088.12363  1.78%  94.8  230s
+  6397  2904 2122.33943   84  127 2126.00000 2093.51958  1.53%  89.9  235s
+  7287  2784 2123.53028   85   77 2126.00000 2107.01595  0.89%  83.6  240s
+  7807  2758 2114.80035  102   50 2126.00000 2111.12278  0.70%  79.1  245s
+  8704  2904 2115.76364  132   52 2126.00000 2112.45848  0.64%  71.6  250s
+  9381  2911 2123.73845  180    7 2126.00000 2112.45895  0.64%  66.8  255s
+ 10235  2866 2121.98223   92   30 2126.00000 2113.66764  0.58%  61.8  261s
+ 10758  2837 2121.20771  142   23 2126.00000 2114.08157  0.56%  59.1  265s
+ 11777  2847 2123.08876  181   50 2126.00000 2114.45865  0.54%  54.7  270s
+ 12475  2773 2123.00000  136    3 2126.00000 2114.99458  0.52%  52.0  275s
+ 13212  2571 2119.13481  123   27 2126.00000 2115.87498  0.48%  49.6  284s
+ 13318  2633 2124.68482  127   47 2126.00000 2116.11441  0.46%  49.3  287s
+ 13763  2593 2118.10976  162   29 2126.00000 2116.25720  0.46%  48.0  290s
+ 14597  2637 2124.04762  125   19 2126.00000 2116.80224  0.43%  45.6  296s
+ 15717  2725 2124.28119  138   37 2126.00000 2117.74999  0.39%  43.1  300s
+
+Cutting planes:
+  Gomory: 102
+  Lift-and-project: 28
+  Cover: 284
+  Implied bound: 5
+  Dual implied bound: 62
+  Clique: 271
+  MIR: 99
+  StrongCG: 3
+  Flow cover: 250
+  GUB cover: 5
+  Inf proof: 3
+  Zero half: 7
+  Relax-and-lift: 1
+
+Explored 16003 nodes (776844 simplex iterations) in 300.12 seconds (261.55 work units)
+Thread count was 20 (of 20 available processors)
+
+Solution count 10: 2126 2135 2155 ... 2216
+
+Time limit reached
+Best objective 2.126000000000e+03, best bound 2.118000000000e+03, gap 0.3763%
+WARNING: Loading a SolverResults object with an 'aborted' status, but
+containing a solution
+# ==========================================================
+# = Solver Results                                         =
+# ==========================================================
+# ----------------------------------------------------------
+#   Problem Information
+# ----------------------------------------------------------
+Problem: 
+- Name: x1
+  Lower bound: 2118.0
+  Upper bound: 2126.0
+  Number of objectives: 1
+  Number of constraints: 138622
+  Number of variables: 189483
+  Number of binary variables: 110860
+  Number of integer variables: 189482
+  Number of continuous variables: 1
+  Number of nonzeros: 454335
+  Sense: minimize
+# ----------------------------------------------------------
+#   Solver Information
+# ----------------------------------------------------------
+Solver: 
+- Status: aborted
+  Return code: 0
+  Message: Optimization terminated because the time expended exceeded the value specified in the TimeLimit parameter.
+  Termination condition: maxTimeLimit
+  Termination message: Optimization terminated because the time expended exceeded the value specified in the TimeLimit parameter.
+  Wall time: 300.1229999065399
+  Error rc: 0
+# ----------------------------------------------------------
+#   Solution Information
+# ----------------------------------------------------------
+Solution: 
+- number of solutions: 0
+  number of solutions displayed: 0
+Pallet 1 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 2 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 3 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 4 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 5 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 6 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 7 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 8 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 9 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 10 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 11 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 12 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 13 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 14 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 15 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 16 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 17 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 18 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 19 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 20 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 21 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 22 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 23 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 24 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 25 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 26 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 27 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 28 shipped by vehicle 3 on day 1, trip 3, size 2
+Pallet 29 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 30 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 31 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 32 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 33 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 34 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 35 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 36 shipped by vehicle 1 on day 1, trip 3, size 2
+Pallet 37 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 38 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 39 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 40 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 41 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 42 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 43 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 44 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 45 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 46 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 47 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 48 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 49 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 50 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 51 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 52 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 53 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 54 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 55 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 56 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 57 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 58 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 59 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 60 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 61 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 62 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 63 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 64 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 65 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 66 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 67 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 68 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 69 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 70 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 71 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 72 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 73 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 74 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 75 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 76 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 77 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 78 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 79 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 80 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 81 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 82 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 83 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 84 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 85 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 86 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 87 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 88 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 89 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 90 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 91 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 92 shipped by vehicle 1 on day 2, trip 1, size 2
+Pallet 93 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 94 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 95 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 96 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 97 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 98 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 99 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 100 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 101 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 102 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 103 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 104 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 105 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 106 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 107 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 108 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 109 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 110 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 111 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 112 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 113 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 114 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 115 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 116 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 117 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 118 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 119 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 120 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 121 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 122 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 123 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 124 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 125 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 126 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 127 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 128 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 129 shipped by vehicle 2 on day 4, trip 3, size 2
+Pallet 130 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 131 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 132 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 133 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 134 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 135 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 136 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 137 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 138 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 139 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 140 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 141 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 142 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 143 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 144 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 145 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 146 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 147 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 148 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 149 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 150 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 151 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 152 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 153 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 154 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 155 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 156 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 157 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 158 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 159 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 160 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 161 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 162 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 163 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 164 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 165 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 166 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 167 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 168 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 169 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 170 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 171 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 172 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 173 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 174 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 175 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 176 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 177 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 178 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 179 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 180 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 181 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 182 shipped by vehicle 1 on day 3, trip 1, size 2
+Pallet 183 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 184 shipped by vehicle 1 on day 3, trip 3, size 2
+Pallet 185 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 186 shipped by vehicle 1 on day 3, trip 2, size 2
+Pallet 187 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 188 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 189 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 190 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 191 shipped by vehicle 2 on day 4, trip 3, size 2
+Pallet 192 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 193 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 194 shipped by vehicle 2 on day 4, trip 3, size 2
+Pallet 195 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 196 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 197 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 198 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 199 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 200 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 201 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 202 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 203 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 204 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 205 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 206 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 207 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 208 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 209 shipped by vehicle 2 on day 4, trip 3, size 2
+Pallet 210 shipped by vehicle 2 on day 4, trip 3, size 2
+Pallet 211 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 212 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 213 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 214 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 215 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 216 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 217 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 218 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 219 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 220 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 221 shipped by vehicle 2 on day 4, trip 3, size 2
+Pallet 222 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 223 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 224 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 225 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 226 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 227 shipped by vehicle 2 on day 4, trip 3, size 2
+Pallet 228 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 229 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 230 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 231 shipped by vehicle 2 on day 4, trip 3, size 2
+Pallet 232 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 233 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 234 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 235 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 236 shipped by vehicle 2 on day 4, trip 3, size 2
+Pallet 237 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 238 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 239 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 240 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 241 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 242 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 243 shipped by vehicle 2 on day 4, trip 3, size 2
+Pallet 244 shipped by vehicle 2 on day 4, trip 3, size 2
+Pallet 245 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 246 shipped by vehicle 2 on day 4, trip 3, size 2
+Pallet 247 shipped by vehicle 2 on day 4, trip 3, size 2
+Pallet 248 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 249 shipped by vehicle 2 on day 4, trip 3, size 2
+Pallet 250 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 251 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 252 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 253 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 254 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 255 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 256 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 257 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 258 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 259 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 260 shipped by vehicle 2 on day 4, trip 3, size 2
+Pallet 261 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 262 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 263 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 264 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 265 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 266 shipped by vehicle 1 on day 4, trip 2, size 2
+Pallet 267 shipped by vehicle 2 on day 4, trip 3, size 2
+Pallet 268 shipped by vehicle 1 on day 4, trip 3, size 2
+Pallet 269 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 270 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 271 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 272 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 273 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 274 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 275 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 276 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 277 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 278 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 279 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 280 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 281 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 282 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 283 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 284 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 285 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 286 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 287 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 288 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 289 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 290 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 291 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 292 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 293 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 294 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 295 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 296 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 297 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 298 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 299 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 300 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 301 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 302 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 303 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 304 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 305 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 306 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 307 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 308 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 309 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 310 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 311 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 312 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 313 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 314 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 315 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 316 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 317 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 318 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 319 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 320 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 321 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 322 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 323 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 324 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 325 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 326 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 327 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 328 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 329 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 330 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 331 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 332 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 333 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 334 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 335 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 336 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 337 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 338 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 339 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 340 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 341 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 342 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 343 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 344 shipped by vehicle 1 on day 5, trip 1, size 2
+Pallet 345 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 346 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 347 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 348 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 349 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 350 shipped by vehicle 1 on day 5, trip 3, size 2
+Pallet 351 shipped by vehicle 2 on day 5, trip 2, size 2
+Pallet 352 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 353 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 354 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 355 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 356 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 357 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 358 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 359 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 360 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 361 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 362 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 363 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 364 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 365 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 366 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 367 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 368 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 369 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 370 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 371 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 372 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 373 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 374 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 375 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 376 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 377 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 378 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 379 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 380 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 381 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 382 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 383 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 384 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 385 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 386 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 387 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 388 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 389 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 390 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 391 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 392 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 393 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 394 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 395 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 396 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 397 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 398 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 399 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 400 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 401 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 402 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 403 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 404 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 405 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 406 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 407 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 408 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 409 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 410 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 411 shipped by vehicle 1 on day 6, trip 3, size 2
+Pallet 412 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 413 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 414 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 415 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 416 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 417 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 418 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 419 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 420 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 421 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 422 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 423 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 424 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 425 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 426 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 427 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 428 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 429 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 430 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 431 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 432 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 433 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 434 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 435 shipped by vehicle 1 on day 7, trip 3, size 2
+Pallet 436 shipped by vehicle 1 on day 7, trip 3, size 2

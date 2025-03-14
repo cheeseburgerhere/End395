@@ -1,0 +1,330 @@
+Read LP format model from file C:\Users\alt_user\AppData\Local\Temp\tmpt3uztw51.pyomo.lp
+Reading time = 0.06 seconds
+x1: 14700 rows, 24895 columns, 77681 nonzeros
+Set parameter TimeLimit to value 300
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (26100.2))
+
+CPU model: 12th Gen Intel(R) Core(TM) i7-12700H, instruction set [SSE2|AVX|AVX2]
+Thread count: 14 physical cores, 20 logical processors, using up to 20 threads
+
+Non-default parameters:
+TimeLimit  300
+
+Optimize a model with 14700 rows, 24895 columns and 77681 nonzeros
+Model fingerprint: 0xb82c587f
+Variable types: 1 continuous, 24894 integer (16596 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [1e+01, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 12896 rows and 13990 columns
+Presolve time: 0.08s
+Presolved: 1804 rows, 10905 columns, 28508 nonzeros
+Variable types: 0 continuous, 10905 integer (9187 binary)
+Found heuristic solution: objective 1367.0000000
+
+Root relaxation: objective 3.469372e+02, 6051 iterations, 0.13 seconds (0.18 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  346.93723    0   69 1367.00000  346.93723  74.6%     -    0s
+H    0     0                    1192.0000000  346.93723  70.9%     -    0s
+H    0     0                    1042.0000000  346.93723  66.7%     -    0s
+H    0     0                     832.0000000  346.93723  58.3%     -    0s
+     0     0  362.25148    0  272  832.00000  362.25148  56.5%     -    0s
+     0     0  362.25148    0  272  832.00000  362.25148  56.5%     -    0s
+     0     0  362.25148    0  272  832.00000  362.25148  56.5%     -    0s
+     0     0  362.63152    0  278  832.00000  362.63152  56.4%     -    0s
+     0     0  363.59730    0  272  832.00000  363.59730  56.3%     -    0s
+     0     0  363.64059    0  271  832.00000  363.64059  56.3%     -    0s
+     0     0  364.37111    0  272  832.00000  364.37111  56.2%     -    0s
+     0     0  364.54968    0  272  832.00000  364.54968  56.2%     -    0s
+     0     0  365.26396    0  272  832.00000  365.26396  56.1%     -    0s
+     0     0  368.56266    0  274  832.00000  368.56266  55.7%     -    0s
+     0     0  368.94271    0  275  832.00000  368.94271  55.7%     -    0s
+     0     0  368.94271    0  282  832.00000  368.94271  55.7%     -    0s
+     0     0  375.55834    0  424  832.00000  375.55834  54.9%     -    1s
+     0     0  375.61567    0  423  832.00000  375.61567  54.9%     -    1s
+     0     0  376.00916    0  412  832.00000  376.00916  54.8%     -    1s
+     0     0  386.41650    0  368  832.00000  386.41650  53.6%     -    1s
+     0     0  398.52601    0  341  832.00000  398.52601  52.1%     -    1s
+     0     0  398.52601    0  346  832.00000  398.52601  52.1%     -    1s
+H    0     0                     820.0000000  398.52601  51.4%     -    1s
+H    0     0                     818.0000000  398.52601  51.3%     -    1s
+     0     0  422.11922    0  508  818.00000  422.11922  48.4%     -    1s
+H    0     0                     805.0000000  438.05013  45.6%     -    1s
+H    0     0                     785.0000000  438.05013  44.2%     -    1s
+     0     0  443.20636    0  489  785.00000  443.20636  43.5%     -    1s
+H    0     0                     773.0000000  448.08640  42.0%     -    1s
+     0     0  448.08640    0  547  773.00000  448.08640  42.0%     -    1s
+     0     0  453.90333    0  576  773.00000  453.90333  41.3%     -    1s
+     0     0  454.00977    0  572  773.00000  454.00977  41.3%     -    1s
+     0     0  454.08518    0  566  773.00000  454.08518  41.3%     -    1s
+H    0     0                     761.0000000  457.64676  39.9%     -    1s
+     0     0  457.64676    0  563  761.00000  457.64676  39.9%     -    1s
+     0     0  458.20482    0  588  761.00000  458.20482  39.8%     -    1s
+     0     0  458.26307    0  587  761.00000  458.26307  39.8%     -    1s
+     0     0  458.29052    0  591  761.00000  458.29052  39.8%     -    1s
+H    0     0                     753.0000000  458.29052  39.1%     -    2s
+     0     0  475.15646    0  631  753.00000  475.15646  36.9%     -    2s
+     0     0  475.69254    0  651  753.00000  475.69254  36.8%     -    2s
+     0     0  475.78913    0  664  753.00000  475.78913  36.8%     -    2s
+     0     0  477.94192    0  691  753.00000  477.94192  36.5%     -    2s
+     0     0  482.85461    0  642  753.00000  482.85461  35.9%     -    2s
+     0     0  487.47443    0  524  753.00000  487.47443  35.3%     -    2s
+     0     0  487.63895    0  542  753.00000  487.63895  35.2%     -    2s
+     0     0  487.68134    0  551  753.00000  487.68134  35.2%     -    2s
+     0     0  496.73313    0  564  753.00000  496.73313  34.0%     -    2s
+     0     0  496.75469    0  567  753.00000  496.75469  34.0%     -    2s
+     0     0  496.88645    0  587  753.00000  496.88645  34.0%     -    2s
+     0     0  497.01529    0  587  753.00000  497.01529  34.0%     -    2s
+     0     0  497.02851    0  589  753.00000  497.02851  34.0%     -    2s
+     0     0  497.18040    0  594  753.00000  497.18040  34.0%     -    2s
+     0     0  497.27651    0  594  753.00000  497.27651  34.0%     -    2s
+     0     0  497.28040    0  594  753.00000  497.28040  34.0%     -    2s
+     0     0  497.29182    0  572  753.00000  497.29182  34.0%     -    2s
+H    0     0                     751.0000000  497.29182  33.8%     -    2s
+     0     0  508.86651    0  561  751.00000  508.86651  32.2%     -    2s
+     0     0  509.36980    0  582  751.00000  509.36980  32.2%     -    2s
+     0     0  509.36980    0  582  751.00000  509.36980  32.2%     -    2s
+     0     0  510.07149    0  579  751.00000  510.07149  32.1%     -    2s
+     0     0  510.18375    0  639  751.00000  510.18375  32.1%     -    2s
+     0     0  511.42554    0  596  751.00000  511.42554  31.9%     -    2s
+     0     0  511.47598    0  607  751.00000  511.47598  31.9%     -    2s
+     0     0  514.86762    0  625  751.00000  514.86762  31.4%     -    2s
+     0     0  514.86762    0  116  751.00000  514.86762  31.4%     -    2s
+     0     0  514.86762    0  321  751.00000  514.86762  31.4%     -    3s
+     0     0  514.86762    0  338  751.00000  514.86762  31.4%     -    3s
+     0     0  514.86762    0  454  751.00000  514.86762  31.4%     -    3s
+     0     0  514.86762    0  503  751.00000  514.86762  31.4%     -    3s
+H    0     0                     731.0000000  514.86762  29.6%     -    3s
+     0     0  514.86762    0  467  731.00000  514.86762  29.6%     -    3s
+     0     0  514.86762    0  448  731.00000  514.86762  29.6%     -    3s
+H    0     0                     711.0000000  514.86762  27.6%     -    3s
+     0     0  514.86762    0  462  711.00000  514.86762  27.6%     -    3s
+     0     0  517.43201    0  344  711.00000  517.43201  27.2%     -    3s
+     0     0  518.41969    0  409  711.00000  518.41969  27.1%     -    3s
+     0     0  518.56971    0  429  711.00000  518.56971  27.1%     -    3s
+     0     0  520.19139    0  472  711.00000  520.19139  26.8%     -    3s
+     0     0  520.48462    0  438  711.00000  520.48462  26.8%     -    3s
+     0     0  520.52115    0  458  711.00000  520.52115  26.8%     -    3s
+     0     0  520.52523    0  468  711.00000  520.52523  26.8%     -    3s
+     0     0  539.85069    0  549  711.00000  539.85069  24.1%     -    3s
+     0     0  540.35666    0  530  711.00000  540.35666  24.0%     -    3s
+     0     0  540.93578    0  446  711.00000  540.93578  23.9%     -    3s
+     0     0  541.08902    0  429  711.00000  541.08902  23.9%     -    3s
+     0     0  541.38299    0  444  711.00000  541.38299  23.9%     -    3s
+     0     0  541.41978    0  447  711.00000  541.41978  23.9%     -    3s
+     0     0  560.33704    0  422  711.00000  560.33704  21.2%     -    3s
+     0     0  560.36354    0  416  711.00000  560.36354  21.2%     -    3s
+     0     0  560.38224    0  422  711.00000  560.38224  21.2%     -    3s
+     0     0  560.38224    0  422  711.00000  560.38224  21.2%     -    3s
+     0     0  560.40179    0  424  711.00000  560.40179  21.2%     -    3s
+     0     0  560.43600    0  424  711.00000  560.43600  21.2%     -    3s
+     0     0  560.46288    0  424  711.00000  560.46288  21.2%     -    3s
+     0     0  560.51338    0  422  711.00000  560.51338  21.2%     -    3s
+     0     0  560.55001    0  425  711.00000  560.55001  21.2%     -    3s
+     0     0  560.67822    0  425  711.00000  560.67822  21.1%     -    3s
+     0     0  560.93479    0  420  711.00000  560.93479  21.1%     -    3s
+     0     0  573.66489    0  470  711.00000  573.66489  19.3%     -    3s
+     0     0  574.15805    0  485  711.00000  574.15805  19.2%     -    4s
+     0     0  574.39050    0  488  711.00000  574.39050  19.2%     -    4s
+     0     0  575.40269    0  442  711.00000  575.40269  19.1%     -    4s
+     0     0  575.48108    0  460  711.00000  575.48108  19.1%     -    4s
+     0     0  579.14711    0  540  711.00000  579.14711  18.5%     -    4s
+     0     0  580.90955    0  516  711.00000  580.90955  18.3%     -    4s
+     0     0  581.10097    0  543  711.00000  581.10097  18.3%     -    4s
+     0     0  582.05606    0  508  711.00000  582.05606  18.1%     -    4s
+     0     0  582.08237    0  551  711.00000  582.08237  18.1%     -    4s
+     0     0  582.79508    0  505  711.00000  582.79508  18.0%     -    4s
+     0     0  582.96929    0  533  711.00000  582.96929  18.0%     -    4s
+     0     0  583.92135    0  580  711.00000  583.92135  17.9%     -    4s
+     0     0  583.92135    0  410  711.00000  583.92135  17.9%     -    4s
+     0     0  583.92135    0  117  711.00000  583.92135  17.9%     -    4s
+     0     0  583.92135    0  238  711.00000  583.92135  17.9%     -    4s
+     0     0  583.92135    0  264  711.00000  583.92135  17.9%     -    5s
+     0     0  583.92135    0  354  711.00000  583.92135  17.9%     -    5s
+     0     0  583.92135    0  428  711.00000  583.92135  17.9%     -    5s
+     0     0  583.92135    0  454  711.00000  583.92135  17.9%     -    5s
+     0     0  583.92135    0  351  711.00000  583.92135  17.9%     -    5s
+     0     0  583.92135    0  377  711.00000  583.92135  17.9%     -    5s
+     0     0  583.92135    0  390  711.00000  583.92135  17.9%     -    5s
+     0     0  583.92135    0  402  711.00000  583.92135  17.9%     -    5s
+     0     0  583.92135    0  463  711.00000  583.92135  17.9%     -    5s
+     0     0  583.92135    0  419  711.00000  583.92135  17.9%     -    5s
+     0     0  583.92135    0  473  711.00000  583.92135  17.9%     -    5s
+     0     0  583.92135    0  460  711.00000  583.92135  17.9%     -    5s
+     0     0  583.92135    0  434  711.00000  583.92135  17.9%     -    5s
+     0     0  583.92135    0  425  711.00000  583.92135  17.9%     -    5s
+     0     0  583.92135    0  430  711.00000  583.92135  17.9%     -    5s
+     0     0  583.92135    0  435  711.00000  583.92135  17.9%     -    5s
+     0     0  586.56674    0  487  711.00000  586.56674  17.5%     -    5s
+     0     0  586.81478    0  442  711.00000  586.81478  17.5%     -    5s
+     0     0  586.87494    0  492  711.00000  586.87494  17.5%     -    5s
+     0     0  587.03445    0  550  711.00000  587.03445  17.4%     -    5s
+     0     0  587.21028    0  400  711.00000  587.21028  17.4%     -    5s
+     0     2  587.21028    0  400  711.00000  587.21028  17.4%     -    5s
+H 2830  2244                     682.0000000  652.05109  4.39%  22.4    9s
+  2845  2254  682.00000  170  395  682.00000  655.04596  3.95%  22.2   10s
+
+Cutting planes:
+  Gomory: 149
+  Lift-and-project: 7
+  Cover: 26
+  Clique: 46
+  MIR: 13
+  StrongCG: 2
+  Flow cover: 37
+  GUB cover: 1
+  Zero half: 11
+
+Explored 2978 nodes (154379 simplex iterations) in 13.40 seconds (11.28 work units)
+Thread count was 20 (of 20 available processors)
+
+Solution count 10: 682 682 711 ... 732
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.820000000000e+02, best bound 6.820000000000e+02, gap 0.0000%
+# ==========================================================
+# = Solver Results                                         =
+# ==========================================================
+# ----------------------------------------------------------
+#   Problem Information
+# ----------------------------------------------------------
+Problem: 
+- Name: x1
+  Lower bound: 682.0
+  Upper bound: 682.0
+  Number of objectives: 1
+  Number of constraints: 14700
+  Number of variables: 24895
+  Number of binary variables: 16596
+  Number of integer variables: 24894
+  Number of continuous variables: 1
+  Number of nonzeros: 77681
+  Sense: minimize
+# ----------------------------------------------------------
+#   Solver Information
+# ----------------------------------------------------------
+Solver: 
+- Status: ok
+  Return code: 0
+  Message: Model was solved to optimality (subject to tolerances), and an optimal solution is available.
+  Termination condition: optimal
+  Termination message: Model was solved to optimality (subject to tolerances), and an optimal solution is available.
+  Wall time: 13.405999898910522
+  Error rc: 0
+# ----------------------------------------------------------
+#   Solution Information
+# ----------------------------------------------------------
+Solution: 
+- number of solutions: 0
+  number of solutions displayed: 0
+Pallet 1 shipped by vehicle 2 on day 1, trip 1, size 2
+Pallet 2 shipped by vehicle 2 on day 1, trip 1, size 2
+Pallet 3 shipped by vehicle 2 on day 1, trip 1, size 2
+Pallet 4 shipped by vehicle 2 on day 1, trip 1, size 2
+Pallet 5 shipped by vehicle 2 on day 1, trip 1, size 2
+Pallet 6 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 7 shipped by vehicle 2 on day 1, trip 1, size 2
+Pallet 8 shipped by vehicle 2 on day 1, trip 1, size 2
+Pallet 9 shipped by vehicle 2 on day 1, trip 1, size 2
+Pallet 10 shipped by vehicle 2 on day 1, trip 1, size 2
+Pallet 11 shipped by vehicle 2 on day 1, trip 1, size 2
+Pallet 12 shipped by vehicle 2 on day 1, trip 1, size 2
+Pallet 13 shipped by vehicle 2 on day 1, trip 1, size 2
+Pallet 14 shipped by vehicle 2 on day 1, trip 1, size 2
+Pallet 15 shipped by vehicle 2 on day 1, trip 1, size 2
+Pallet 16 shipped by vehicle 2 on day 1, trip 1, size 2
+Pallet 17 shipped by vehicle 2 on day 3, trip 3, size 2
+Pallet 18 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 19 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 20 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 21 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 22 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 23 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 24 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 25 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 26 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 27 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 28 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 29 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 30 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 31 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 32 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 33 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 34 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 35 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 36 shipped by vehicle 1 on day 2, trip 2, size 2
+Pallet 37 shipped by vehicle 2 on day 3, trip 3, size 2
+Pallet 38 shipped by vehicle 2 on day 3, trip 3, size 2
+Pallet 39 shipped by vehicle 2 on day 3, trip 3, size 2
+Pallet 40 shipped by vehicle 2 on day 3, trip 3, size 2
+Pallet 41 shipped by vehicle 2 on day 3, trip 3, size 2
+Pallet 42 shipped by vehicle 2 on day 3, trip 3, size 2
+Pallet 43 shipped by vehicle 2 on day 3, trip 3, size 2
+Pallet 44 shipped by vehicle 2 on day 3, trip 3, size 2
+Pallet 45 shipped by vehicle 2 on day 3, trip 3, size 2
+Pallet 46 shipped by vehicle 2 on day 3, trip 3, size 2
+Pallet 47 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 48 shipped by vehicle 2 on day 3, trip 3, size 2
+Pallet 49 shipped by vehicle 2 on day 3, trip 3, size 2
+Pallet 50 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 51 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 52 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 53 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 54 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 55 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 56 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 57 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 58 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 59 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 60 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 61 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 62 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 63 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 64 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 65 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 66 shipped by vehicle 2 on day 4, trip 1, size 2
+Pallet 67 shipped by vehicle 3 on day 5, trip 3, size 2
+Pallet 68 shipped by vehicle 3 on day 5, trip 3, size 2
+Pallet 69 shipped by vehicle 3 on day 5, trip 3, size 2
+Pallet 70 shipped by vehicle 3 on day 5, trip 3, size 2
+Pallet 71 shipped by vehicle 3 on day 5, trip 3, size 2
+Pallet 72 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 73 shipped by vehicle 3 on day 5, trip 3, size 2
+Pallet 74 shipped by vehicle 3 on day 5, trip 3, size 2
+Pallet 75 shipped by vehicle 3 on day 5, trip 3, size 2
+Pallet 76 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 77 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 78 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 79 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 80 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 81 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 82 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 83 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 84 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 85 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 86 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 87 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 88 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 89 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 90 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 91 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 92 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 93 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 94 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 95 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 96 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 97 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 98 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 99 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 100 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 101 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 102 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 103 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 104 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 105 shipped by vehicle 1 on day 6, trip 2, size 2
+Pallet 106 shipped by vehicle 1 on day 6, trip 2, size 2
