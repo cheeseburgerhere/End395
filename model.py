@@ -1,43 +1,99 @@
 import pyomo.environ as pyo
+import pandas as pd
+
+
+#!pip install openpyxl
+
+directory="Scenarios\ProjectPart1-Scenario1.xlsx"
+#pandas depens on this package to read excel files
+orders=pd.read_excel(directory,sheet_name="Orders")
+
+
+trucks=pd.read_excel(directory,sheet_name="Vehicles")
+
+
+pallets=pd.read_excel(directory,sheet_name="Pallets")
+
+
+extraParam=pd.read_excel(directory,sheet_name="Parameters")
+
+
 
 # --------------------------------------------------------
 # 1) Create the model
 # --------------------------------------------------------
 model = pyo.ConcreteModel()
 
+
 # --------------------------------------------------------
 # 2) Define Sets
 # --------------------------------------------------------
-# These are *examples* of how you might define sets. Adapt them to your data.
-model.I = pyo.Set(doc="Set of pallets")
-model.K = pyo.Set(doc="Set of vehicle types")
-model.T = pyo.Set(doc="Set of days")
-model.M = pyo.Set(doc="Set of possible trips per day")
-model.S = pyo.Set(doc="Set of pallet sizes")
-model.O = pyo.Set(doc="Set of orders")
-model.J = pyo.Set(doc="Set of products (if needed)") 
+model.I = pyo.Set(initialize=range(1, len(pallets)+1), doc="Set of pallets")
+model.K = pyo.Set(initialize=trucks["Vehicle Type"].unique().tolist(), doc="Set of vehicle types")
 
-# A typical approach for the 'product-of-sets' (K × T × M × S) is to just index 
-# variables directly by all four sets. Alternatively, you can define subsets of valid combinations.
+# Don't forget to change the indexes if there is a change in data, default order:
+# 0	Planning Horizon (T)
+# 1	Max. trips per period	
+# 2	Max. pallets in area
+
+model.T = pyo.Set(initialize=range(1, extraParam.iloc[0,1]+1), doc="Set of days")
+model.M = pyo.Set(initialize=range(1, extraParam.iloc[1,1]+1), doc="Set of possible trips per day")
+
+model.S = pyo.Set(initialize=range(1, pallets["Pallet Size"].max()+1), doc="Set of pallet sizes")
+model.O = pyo.Set(initialize=orders["Order ID"].unique() ,doc="Set of orders")
+# model.J = pyo.Set(initialize=range(1, int(sorted(pallets["Product Type"].unique())[-1][-1])+1), doc="Set of products") 
+model.J = pyo.Set(initialize=pallets["Product Type"].unique(), doc="Set of products") 
+
+
+
+capacity_dict = {}
+for row in trucks["Vehicle Type"].unique():
+    row=trucks[trucks["Vehicle Type"]==row].iloc[0,:]
+    k=int(row.iloc[1])
+    s=1
+    capacity_dict[(k, s)] = row.iloc[2]
+    k=int(row.iloc[1])
+    s=2
+    capacity_dict[(k, s)] = row.iloc[3]
+
+demand_dict = {}
+for row in orders.iterrows():
+    o=row[1].iloc[0]
+    j=row[1].iloc[1]
+    demand_dict[(o, j)] = row[1].iloc[2]
+
+
+
 
 # --------------------------------------------------------
 # 3) Define Parameters
 # --------------------------------------------------------
-# The following are *placeholders* — you must populate them from your data.
-model.release_day = pyo.Param(model.I, within=pyo.NonNegativeIntegers, doc="r_i: Release day for pallet i")
-model.c_owned     = pyo.Param(model.K, within=pyo.NonNegativeReals, doc="c_k: Cost of using an owned vehicle type k")
-model.c_rented    = pyo.Param(model.K, within=pyo.NonNegativeReals, doc="c'_k: Cost of renting vehicle type k")
-model.h           = pyo.Param(model.O, within=pyo.NonNegativeReals, doc="h_o: Per-day earliness penalty for order o")
-model.d_due       = pyo.Param(model.O, within=pyo.NonNegativeIntegers, doc="d_o: Due day for order o")
-model.p_demand    = pyo.Param(model.O, model.J, within=pyo.NonNegativeIntegers, doc="p_{o,j}: Demand for product j in order o")
-model.j_of_i      = pyo.Param(model.I, within=model.J, doc="j(i): Product type of pallet i")
-model.n_i         = pyo.Param(model.I, within=pyo.NonNegativeIntegers, doc="n_i: Product capacity of pallet i")
-model.capacity    = pyo.Param(model.K, model.S, within=pyo.NonNegativeIntegers, doc="Capacity_{k,s}: # of pallets of size s that fit in vehicle k")
-model.b_k         = pyo.Param(model.K, within=pyo.NonNegativeIntegers, doc="b_k: Number of owned vehicles of type k available")
-model.q           = pyo.Param(within=pyo.NonNegativeIntegers, doc="q: Max number of pallets allowed in waiting area overnight")
+model.release_day = pyo.Param(model.I, initialize=dict(enumerate(pallets["Release Day"], start=1)), within=pyo.NonNegativeIntegers, doc="r_i: Release day for pallet i")
+model.c_owned     = pyo.Param(model.K, initialize=dict(enumerate(trucks.groupby(["Vehicle Type","Fixed Cost (c_k)"]).count().reset_index().iloc[:,1], start=1)), within=pyo.NonNegativeReals, doc="c_k: Cost of using an owned vehicle type k")
+model.c_rented    = pyo.Param(model.K, initialize=dict(enumerate(trucks.groupby(["Vehicle Type","Variable Cost (c'_k)"]).count().reset_index().iloc[:,1], start=1)), within=pyo.NonNegativeReals, doc="c'_k: Cost of renting vehicle type k")
 
-# For instance, if each vehicle type k can only make 3 trips/day, you'd encode that as needed.
-# The parameter b_k might represent the maximum vehicles of type k you own, so daily usage limit is 3*b_k, etc.
+#!!!!!!! Unchecked initialization
+model.h           = pyo.Param(model.O, initialize=orders.groupby(["Order ID","Earliness Penalty"]).count().reset_index().iloc[:,0:2].set_index("Order ID").to_dict()["Earliness Penalty"], within=pyo.NonNegativeReals, doc="h_o: Per-day earliness penalty for order o")
+model.d_due       = pyo.Param(model.O, initialize=orders.groupby(["Order ID","Due Date"]).count().reset_index().iloc[:,0:2].set_index("Order ID").to_dict()["Due Date"], within=pyo.NonNegativeIntegers, doc="d_o: Due day for order o")
+
+
+model.p_demand    = pyo.Param(model.O, model.J, initialize=demand_dict, default=0, within=pyo.NonNegativeIntegers, doc="p_{o,j}: Demand for product j in order o")
+demand_dict=None
+
+model.j_of_i      = pyo.Param(model.I, initialize=dict(enumerate(pallets["Product Type"], start=1)), within=model.J, doc="j(i): Product type of pallet i")
+model.n_i         = pyo.Param(model.I, initialize=dict(enumerate(pallets["Amount"], start=1)), within=pyo.NonNegativeIntegers, doc="n_i: Product capacity of pallet i")
+
+
+model.capacity    = pyo.Param(model.K, model.S, initialize=capacity_dict, within=pyo.NonNegativeIntegers, doc="Capacity_{k,s}: # of pallets of size s that fit in vehicle k")
+capacity_dict=None
+
+model.b_k         = pyo.Param(model.K, initialize=dict(enumerate(trucks.groupby("Vehicle Type").count().reset_index().iloc[:,1], start=1)), within=pyo.NonNegativeIntegers, doc="b_k: Number of owned vehicles of type k available")
+
+model.q           = pyo.Param(initialize=extraParam.iloc[2,1],within=pyo.NonNegativeIntegers, doc="q: Max number of pallets allowed in waiting area overnight")
+
+
+
+
 
 # --------------------------------------------------------
 # 4) Define Decision Variables
@@ -62,6 +118,38 @@ model.x = pyo.Var(model.I, model.K, model.T, model.M, model.S, within=pyo.Binary
 model.e = pyo.Var(model.I, model.O, model.T, within=pyo.NonNegativeIntegers,
                   doc="e_{i,o,t}: products from pallet i allocated to order o and shipped on day t")
 
+
+model.e_sub= pyo.Var(model.I, model.O, model.T, within=pyo.Binary,
+                  doc="e_sub_{i,o,t}: if any products from pallet i allocated to order o and shipped on day t")
+
+
+
+# After declaring model.x, fix variables where t < earliest_day[i]
+fixedCount=0
+for i in model.I:
+    T_i = model.release_day[i]
+    for t in model.T:
+        if t < T_i:
+            for k in model.K:
+                for m in model.M:
+                    for s in model.S:
+                        model.x[i, k, t, m, s].fix(0)
+                        fixedCount+=1
+
+print(fixedCount, "variables fixed to 0")
+
+fixedCountE=0
+for i in model.I:
+    T_i = model.release_day[i]
+    for t in model.T:
+        if t < T_i:
+            for o in model.O:
+                model.e[i, o, t].fix(0)
+                model.e_sub[i, o, t].fix(0)
+                fixedCountE+=1
+
+
+print(fixedCountE*2, "e variables fixed to 0")
 # --------------------------------------------------------
 # 5) Define Constraints
 # --------------------------------------------------------
@@ -149,6 +237,14 @@ def waiting_area_rule(model, t):
     ) <= model.q
 model.waiting_area = pyo.Constraint(model.T, rule=waiting_area_rule)
 
+
+M = 300
+
+def e_sub_rule(model, i, o, t):
+    # If any products from pallet i are allocated to order o on day t, then e_sub[i,o,t] must be 1.
+    return model.e[i, o, t] <= M * model.e_sub[i, o, t]
+model.e_sub_constraint = pyo.Constraint(model.I, model.O, model.T, rule=e_sub_rule)
+
 # --------------------------------------------------------
 # 6) Define Objective
 # --------------------------------------------------------
@@ -158,7 +254,7 @@ model.waiting_area = pyo.Constraint(model.T, rule=waiting_area_rule)
 def objective_rule(model):
     vehicle_cost = sum(model.c_owned[k]*model.y[k, t, m] + model.c_rented[k]*model.z[k, t, m]
                        for k in model.K for t in model.T for m in model.M)
-    earliness_cost = sum((model.d_due[o] - t)*model.h[o]*model.e[i, o, t]
+    earliness_cost = sum((model.d_due[o] - t)*model.h[o]*model.e_sub[i, o, t]
                          for i in model.I
                          for o in model.O
                          for t in model.T
@@ -168,24 +264,37 @@ def objective_rule(model):
 
 model.Obj = pyo.Objective(rule=objective_rule, sense=pyo.minimize)
 
-# --------------------------------------------------------
-# 7) Solve
-# --------------------------------------------------------
-# In practice, you will load/initialize data for sets and parameters, 
-# then call a solver such as CBC, GLPK, Gurobi, or CPLEX:
-#    solver = pyo.SolverFactory('gurobi')  # or cplex, glpk, etc.
-#    solver.solve(model, tee=True)
 
-# Example: 
-# solver = pyo.SolverFactory('glpk')
-# results = solver.solve(model, tee=True)
-# results.write()
+
+# --------------------------------------------------------
+#Solver
+solver= pyo.SolverFactory('gurobi')
+solver.options['TimeLimit'] = 3600*6
+solver.options["Threads"]=16
+
+
+results = solver.solve(model, tee=True)
+results.write()
 
 # At this point, you can query solution values:
-# for i in model.I:
-#     for k in model.K:
-#         for t in model.T:
-#             for m in model.M:
-#                 for s in model.S:
-#                     if pyo.value(model.x[i,k,t,m,s]) > 0.5:
-#                         print(f"Pallet {i} shipped by vehicle {k} on day {t}, trip {m}, size {s}")
+for i in model.I:
+    for k in model.K:
+        for t in model.T:
+            for m in model.M:
+                for s in model.S:
+                    if pyo.value(model.x[i,k,t,m,s]) != 0:
+                        print(f"Pallet {i} shipped by vehicle {k} on day {t}, trip {m}, size {s}")
+
+
+
+print("\n")
+# --------------------------------------------------------
+# 7) Output
+# At this point, you can query solution values:
+
+for i in model.I:
+    for o in model.O:
+        for t in model.T:
+                    if pyo.value(model.e[i,o,t]) != 0:
+                        print(f"Pallet {i} shipped to order {o} on day {t}")
+                        # print(f"Pallet {i} shipped by vehicle {k} on day {t}, trip {m}, size {s}")
